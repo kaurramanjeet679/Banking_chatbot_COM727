@@ -1,0 +1,88 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good day", "Greetings", "What's up"],
+      "responses": ["Hello! How can I assist you today?", "Hi there! How can I help?", "Greetings! How can I assist?"],
+      "context": [""]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "See you later", "Catch you later", "Farewell"],
+      "responses": ["Goodbye! Have a great day!", "See you later! Take care!", "Bye! Come back if you have more questions!"],
+      "context": [""]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "Much appreciated", "Thanks a lot", "Thank you very much"],
+      "responses": ["You're welcome!", "Happy to help!", "Anytime!"],
+      "context": [""]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": ["I'm sorry, I didn't understand that.", "Could you please rephrase?", "I'm not sure I understand."],
+      "context": [""]
+    },
+    {
+      "tag": "account_balance",
+      "patterns": ["What is my account balance?", "Show my balance", "How much money do I have?", "Check my balance", "Account balance"],
+      "responses": ["Please provide your account number to check the balance.", "I need your account number to fetch the balance details."],
+      "context": ["get_account_number"]
+    },
+    {
+      "tag": "get_account_number",
+      "patterns": [],
+      "responses": ["Checking balance for account number: {account_number}"],
+      "context": [""]
+    },
+    {
+      "tag": "transfer_money",
+      "patterns": ["Transfer money", "I want to send money", "Send money to another account", "How do I transfer funds?", "Money transfer"],
+      "responses": ["Please provide the recipient's account number and the amount to transfer.", "I need the recipient's account number and transfer amount to proceed."],
+      "context": ["get_transfer_details"]
+    },
+    {
+      "tag": "get_transfer_details",
+      "patterns": [],
+      "responses": ["Transferring {amount} to account number: {recipient_account_number}"],
+      "context": [""]
+    },
+    {
+      "tag": "loan_inquiry",
+      "patterns": ["How do I apply for a loan?", "Loan application", "Tell me about loan options", "Loan inquiry", "I need a loan"],
+      "responses": ["You can apply for a loan through our website or visit the nearest branch. What type of loan are you interested in?", "We offer various loan options. Please specify the type of loan you're interested in."],
+      "context": ["get_loan_type"]
+    },
+    {
+      "tag": "get_loan_type",
+      "patterns": [],
+      "responses": ["Please provide more details about the {loan_type} loan you're interested in."],
+      "context": [""]
+    },
+    {
+      "tag": "card_block",
+      "patterns": ["Block my card", "I lost my card", "How do I block my card?", "Report lost card", "Card stolen"],
+      "responses": ["Please provide your card number to block it.", "I need your card number to block the card."],
+      "context": ["get_card_number"]
+    },
+    {
+      "tag": "get_card_number",
+      "patterns": [],
+      "responses": ["Blocking card number: {card_number}"],
+      "context": [""]
+    },
+    {
+      "tag": "branch_info",
+      "patterns": ["Where is the nearest branch?", "Branch location", "Find a branch", "Nearest branch", "Branch information"],
+      "responses": ["Please provide your location to find the nearest branch.", "I need your location to find the nearest branch."],
+      "context": ["get_location"]
+    },
+    {
+      "tag": "get_location",
+      "patterns": [],
+      "responses": ["Here is the nearest branch to your location: {location}"],
+      "context": [""]
+    }
+  ]
+}
